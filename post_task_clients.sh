@@ -1,6 +1,9 @@
 #!/bin/bash
 # Post creation tasks for clients
+RootPassword='ansible'
 AnsiblePassword='ansible'
+
+echo $RootPassword | passwd --stdin
 useradd srv_ansible
 echo $AnsiblePassword | passwd srv_ansible --stdin;
 
